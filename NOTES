@@ -1,1 +1,1 @@
- - Before deploying to heroku: ` heroku buildpacks:set mars/create-react-app`
+ - To create an heroku create-react-app in EU: `heroku create appalti190-showcase --buildpack mars/create-react-app --region=eu`
