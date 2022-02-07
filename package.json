@@ -1,6 +1,6 @@
 {
   "name": "appalti190-showcase",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
@@ -20,7 +20,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "npm start",
+    "REMOVEMEstart": "npm start",
     "start-dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
