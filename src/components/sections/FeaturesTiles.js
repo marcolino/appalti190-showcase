@@ -45,7 +45,14 @@ const FeaturesTiles = ({
 
   const sectionHeader = {
     title: 'Assolvi agli adempimenti di trasparenza in modo semplice e naturale',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    /* eslint-disable no-useless-concat */
+    paragraph:
+      'Ti forniamo un semplicissimo modello di foglio di calcolo Excel (oppure Open Document Format).' + ' ' +
+      'La tua amministrazione deve compilarlo, una riga per ogni appalto.' + ' ' +
+      'Al termine, prima della scadenza (in genere alla fine di Gennaio), è sufficiente collegarsi' + ' ' +
+      'al nostro sito, e caricare il foglio compilato.' + ' ' +
+      'A questo punto potrai scaricare il documento pronto da pubblicare sul sito dell\'ANAS.'
+    ,
   };
 
   return (
@@ -55,7 +62,7 @@ const FeaturesTiles = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="left-content" />
           <div className={tilesClasses}>
 
             <div className="tiles-item reveal-from-bottom">
