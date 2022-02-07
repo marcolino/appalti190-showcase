@@ -56,6 +56,7 @@ const FeaturesSplit = ({
 
   return (
     <section
+      id={"workflow"}
       {...props}
       className={outerClasses}
     >
