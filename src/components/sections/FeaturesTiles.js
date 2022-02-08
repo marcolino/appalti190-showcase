@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
-import Image from '../elements/Image';
+//import Image from '../elements/Image';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -65,6 +65,7 @@ const FeaturesTiles = ({
           <SectionHeader data={sectionHeader} className="left-content" />
           <div className={tilesClasses}>
 
+{/*
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -196,6 +197,7 @@ const FeaturesTiles = ({
                 </div>
               </div>
             </div>
+*/}
 
           </div>
         </div>

@@ -59,9 +59,9 @@ const Hero = ({
     >
       <div className="container-sm">
         <div className={innerClasses}>
-          <div className="hero-content">
+          <div className="hero-content" style={{marginTop: -48}}>
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Servizio per l'assolvimento degli obblighi di pubblicazione delle informazioni all’<span className="text-color-primary">Autorità Nazionale Anticorruzione</span>, ai sensi della  <span className="text-color-primary">legge n. 190/2012</span>.
+              Servizio per l'assolvimento degli obblighi di pubblicazione delle informazioni all’<span className="text-color-primary">Autorità Nazionale AntiCorruzione</span>, ai sensi della  <span className="text-color-primary">legge n. 190/2012</span>.
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
@@ -69,8 +69,8 @@ const Hero = ({
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="/#workflow">
-                    Per saperne di più
+                  <Button tag="a" color="primary" wideMobile href="/#workflow" style={{fontSize: "1.2em", color:"white"}}>
+                    Mi interessa!
                   </Button>
                 </ButtonGroup>
               </div>

@@ -3,14 +3,16 @@
   "name": "Appalti 190 Showcase",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "favicon-64x64.png",
+      "type": "image/png",
+      "sizes": "64x64",
+      "purpose": "any"
     },
     {
-      "src": "favicon-192x192.ico",
-      "type": "image/x-icon",
-      "sizes": "192x192"
+      "src": "favicon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
     }
   ],
   "start_url": ".",

@@ -50,8 +50,8 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Workflow that just works',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'Un modello molto elegante!',
+    paragraph: 'Il modello Excel che ti forniamo ti guida a non commettere sviste durante l\'inserimento dei dati.'
   };
 
   return (
@@ -68,14 +68,15 @@ const FeaturesSplit = ({
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
+                  Un'operazione semplicissima
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
+                  Compila una riga di un foglio di calcolo per ogni appalto
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  Il tuo strumento di lavoro sarà il foglio di calcolo a cui sei già abituato: <b><i>MS-Excel</i></b> o <b><i>LibreOffice Calc</i></b>.
+                  Nessun bisogno di imparare nuovi software, con regole nuove e vincoli difficili da comprendere.
+                </p>
               </div>
               <div className={
                 classNames(
@@ -84,24 +85,25 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-01.png')}
-                  alt="Features split 01"
-                  width={528}
-                  height={396} />
+                  // src={require('./../../assets/images/features-split-image-01.png')}
+                  src={require('./../../assets/images/appalti190-elenco-gare.png')}
+                  alt="Elenco gare"
+                  width={1608}
+                  height={791} />
               </div>
             </div>
 
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
-                  </div>
+                  Una conferma immediata
+                </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
-                  </h3>
+                  Fai upload del foglio
+                </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  Alla fine dell'anno (ma potrai farlo ogni momento che vorrai) ti basterà caricare il foglio di calcolo sul sito <b><i>appalti190</i></b>.
+                </p>
               </div>
               <div className={
                 classNames(
@@ -110,24 +112,25 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-02.png')}
-                  alt="Features split 02"
-                  width={528}
-                  height={396} />
+                  src={require('./../../assets/images/appalti190-upload-xls.png')}
+                  alt="Upload file"
+                  width={1202}
+                  height={168} />
               </div>
             </div>
 
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  Lightning fast workflow
-                  </div>
+                  Una verifica istantanea
+                </div>
                 <h3 className="mt-0 mb-12">
-                  Data-driven insights
-                  </h3>
+                  Verifica la correttezza formale dei dati inseriti in un click.                  
+                </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
+                  In un istante saprai se tutti i dati che hai inserito sono formalmente corretti.
+                  Questa verifica è la stessa adottata dall' A.N.A.C.
+                </p>
               </div>
               <div className={
                 classNames(
@@ -136,10 +139,10 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-03.png')}
-                  alt="Features split 03"
-                  width={528}
-                  height={396} />
+                  src={require('./../../assets/images/ok.png')}
+                  alt="Ok"
+                  width={202}
+                  height={68} />
               </div>
             </div>
 
