@@ -1,9 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
-import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
+
+//import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
+// TODO: use https://codepen.io/htmlcodex/pen/JjYmEeV
+
+import styles from './PricesSection.module.css';
+
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 //import Image from '../elements/Image';
+
+const featuredClasses = `${styles.ptable_item} ${styles.featured_item}`;
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -52,9 +59,9 @@ const Prices = ({
     ,
   };
 
-  const choice = (c) => {
-    console.log("You choose", c);
-  };
+  // const choice = (c) => {
+  //   console.log("You choose", c);
+  // };
 
   return (
     <section
@@ -66,7 +73,98 @@ const Prices = ({
           <SectionHeader data={sectionHeader} className="left-content" />
           <div className={tilesClasses}>
 
-            <PricingTable highlightColor='#6163FF'>
+            <div className={styles.pricing_table}>
+
+              <div className={styles.ptable_item}>
+                <div className={styles.ptable_single}>
+                  <div className={styles.ptable_header}>
+                    <div className={styles.ptable_title}>
+                      <h2>Gratuito</h2>
+                    </div>
+                    <div className={styles.ptable_price}>
+                      <h2><small>€</small>0<span>/ anno</span></h2>
+                    </div>
+                  </div>
+                  <div className={styles.ptable_body}>
+                    <div className={styles.ptable_description}>
+                      <ul>
+                        <li>fino a <b>10</b> CIG </li>
+                        <li>Supporto per email</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className={styles.ptable_footer}>
+                    <div className={styles.ptable_action}>
+                      <a href="#0">Prova gratuitamente</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={featuredClasses}>
+                <div className={styles.ptable_single}>
+                  <div className={styles.ptable_header}>
+                    {/* <div className={styles.ptable_status}>
+                      <span>Hot</span>
+                    </div> */}
+                    <div className={styles.ptable_title}>
+                      <h2>Standard</h2>
+                    </div>
+                    <div className={styles.ptable_price}>
+                      <h2><small>€</small>399<span>/ anno</span></h2>
+                    </div>
+                  </div>
+                  <div className={styles.ptable_body}>
+                    <div className={styles.ptable_description}>
+                      <ul>
+                        <li>fino a <b>3000</b> CIG </li>
+                        <li>Supporto per email</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className={styles.ptable_footer}>
+                    <div className={styles.ptable_action}>
+                      <a href="#0">Acquista</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.ptable_item}>
+                <div className={styles.ptable_single}>
+                  <div className={styles.ptable_header}>
+                    <div className={styles.ptable_title}>
+                      <h2>Illimitato</h2>
+                    </div>
+                    <div className={styles.ptable_price}>
+                      <h2><small>€</small>799<span>/ anno</span></h2>
+                    </div>
+                  </div>
+                  <div className={styles.ptable_body}>
+                    <div className={styles.ptable_description}>
+                      <ul>
+                        <li>CIG <b>illimitate</b></li>
+                        <li>Supporto per email</li>
+                        <li>Supporto telefonico</li>
+                        <li>&nbsp;</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className={styles.ptable_footer}>
+                    <div className={styles.ptable_action}>
+                      <a href="#0">Acquista</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* <PricingTable highlightColor='#6163FF'>
               <PricingSlot onClick={() => choice('FREE')} buttonText='Prova gratuitamente' title='GRATUITO' priceText='€ 0 / anno'>
                 <PricingDetail> fino a <b>10</b> CIG </PricingDetail>
                 <PricingDetail> &nbsp; </PricingDetail>
@@ -87,122 +185,13 @@ const Prices = ({
                 <PricingDetail> <b>Supporto email</b> </PricingDetail>
                 <PricingDetail> <b>Supporto telefonico</b> </PricingDetail>
               </PricingSlot>
-            </PricingTable>
+            </PricingTable> */}
 
           </div>
         </div>
       </div>
     </section>
   );
-/*
-  return (
-    <section
-      {...props}
-      className={outerClasses}
-    >
-      <div className="container">
-        <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="left-content" />
-          <div className={tilesClasses}>
-
-            <div className="tiles-item reveal-from-bottom feature-prices-tiles-item" style={{background:"darkgreen"}}>
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
-                      alt="Features tile icon 01"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-0">
-                    Prova solo per un anno
-                  </h4>
-                  <br />
-                  <h1 className="mt-0">
-                    € 590,00
-                  </h1>
-                  <p className="mt-0 mb-0">
-                    Compresa assistenza
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
-                      alt="Features tile icon 02"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    2 anni
-                  </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
-                      alt="Features tile icon 03"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    3 anni
-                  </h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
-                      alt="Features tile icon 04"
-                      width={64}
-                      height={64} />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    5 anni (o più)
-                  </h4>
-                  <p className="m-0 text-sm">
-                    Abbonati per 5 o più anni, ad un prezzo davvero irrisorio.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-  */
 }
 
 Prices.propTypes = propTypes;
