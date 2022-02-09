@@ -45,7 +45,7 @@ const Footer = ({
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <FooterNav />
-            <div className="footer-copyright">Made by <a href="https://www.arsistemi.com">ARSistemi</a>. All right reserved</div>
+            <div className="footer-copyright">By <a href="https://www.arsistemi.com">ARSistemi</a>. Tutti i diritti riservati.</div>
           </div>
         </div>
       </div>

@@ -36,7 +36,7 @@ const Cta = ({
   );
 
   const innerClasses = classNames(
-    'cta-inner section-inner',
+    'cta-inner', 'section-inner',
     topDivider && 'has-top-divider',
     bottomDivider && 'has-bottom-divider',
     split && 'cta-split'

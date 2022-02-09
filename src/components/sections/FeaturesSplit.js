@@ -88,8 +88,8 @@ const FeaturesSplit = ({
                   // src={require('./../../assets/images/features-split-image-01.png')}
                   src={require('./../../assets/images/appalti190-elenco-gare.png')}
                   alt="Elenco gare"
-                  width={1608}
-                  height={791} />
+                  _width={860}
+                  h_eight={464} />
               </div>
             </div>
 
@@ -139,7 +139,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/ok.png')}
+                  src={require('./../../assets/images/appalti190-ok.png')}
                   alt="Ok"
                   width={202}
                   height={68} />

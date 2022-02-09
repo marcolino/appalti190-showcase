@@ -1,8 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
-import SectionHeader from './partials/SectionHeader';
-//import Image from '../elements/Image';
+//import SectionHeader from './partials/SectionHeader';
+import Image from '../elements/Image';
+import Button from '../elements/Button';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -43,17 +44,17 @@ const FeaturesTiles = ({
     pushLeft && 'push-left'
   );
 
-  const sectionHeader = {
-    title: 'Assolvi agli adempimenti di trasparenza in modo semplice e naturale',
-    /* eslint-disable no-useless-concat */
-    paragraph:
-      'Ti forniamo un semplicissimo modello di foglio di calcolo Excel (oppure Open Document Format).' + ' ' +
-      'La tua amministrazione deve compilarlo, una riga per ogni appalto.' + ' ' +
-      'Al termine, prima della scadenza (in genere alla fine di Gennaio), è sufficiente collegarsi' + ' ' +
-      'al nostro sito, e caricare il foglio compilato.' + ' ' +
-      'A questo punto potrai scaricare il documento pronto da pubblicare sul sito dell\'ANAS.'
-    ,
-  };
+  // const sectionHeader = {
+  //   title: 'Assolvi agli adempimenti di trasparenza in modo semplice e naturale',
+  //   /* eslint-disable no-useless-concat */
+  //   paragraph:
+  //     'Ti forniamo un semplicissimo modello di foglio di calcolo Excel (oppure Open Document Format).' + ' ' +
+  //     'La tua amministrazione deve compilarlo, una riga per ogni appalto.' + ' ' +
+  //     'Al termine, prima della scadenza (in genere alla fine di Gennaio), è sufficiente collegarsi' + ' ' +
+  //     'al nostro sito, e caricare il foglio compilato.' + ' ' +
+  //     'A questo punto potrai scaricare il documento pronto da pubblicare sul sito dell\'ANAS.'
+  //   ,
+  // };
 
   return (
     <section
@@ -62,8 +63,36 @@ const FeaturesTiles = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="left-content" />
+          {/* <SectionHeader data={sectionHeader} className="left-content" /> */}
           <div className={tilesClasses}>
+
+            <div className="tiles-item reveal-from-bottom">
+              <div className="tiles-item-inner">
+                <div className="features-tiles-item-header">
+                  <div className="features-tiles-item-image mb-16">
+                    <Image
+                      src={require('./../../assets/images/appalti190-euro.png')}
+                      alt="Prezzi"
+                      width={64}
+                      height={64} />
+                  </div>
+                </div>
+                <div className="features-tiles-item-content">
+                  <h4 className="mt-0 mb-8">
+                    I nostri prezzi
+                  </h4>
+                  <p className="m-0 text-sm mb-8">
+                    La nostra politica di prezzi cerca di adattarsi a qualsiasi tipo di entità, dalle più piccole alle più strutturate.
+                    Offriamo anche un piano gratuito, per realtà molto piccole, oppure per preovare la funzionalità della nostra soluzione.
+                  </p>
+                </div>
+                <p className="mt-8">
+                  <Button tag="a" color="primary" wideMobile href="/prices" style={{fontSize: "1.2em", color:"white"}}>
+                    Verifica i prezzi
+                  </Button>
+                </p>
+              </div>
+            </div>
 
 {/*
             <div className="tiles-item reveal-from-bottom">
