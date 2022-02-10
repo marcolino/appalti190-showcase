@@ -44,18 +44,6 @@ const FeaturesTiles = ({
     pushLeft && 'push-left'
   );
 
-  // const sectionHeader = {
-  //   title: 'Assolvi agli adempimenti di trasparenza in modo semplice e naturale',
-  //   /* eslint-disable no-useless-concat */
-  //   paragraph:
-  //     'Ti forniamo un semplicissimo modello di foglio di calcolo Excel (oppure Open Document Format).' + ' ' +
-  //     'La tua amministrazione deve compilarlo, una riga per ogni appalto.' + ' ' +
-  //     'Al termine, prima della scadenza (in genere alla fine di Gennaio), è sufficiente collegarsi' + ' ' +
-  //     'al nostro sito, e caricare il foglio compilato.' + ' ' +
-  //     'A questo punto potrai scaricare il documento pronto da pubblicare sul sito dell\'ANAS.'
-  //   ,
-  // };
-
   return (
     <section
       {...props}

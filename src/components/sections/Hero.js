@@ -69,7 +69,7 @@ const Hero = ({
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="/#workflow" style={{fontSize: "1.2em", color:"white"}}>
+                  <Button tag="a" color="primary" wideMobile href="/#features" style={{fontSize: "1.1em", color:"white"}}>
                     Mi interessa!
                   </Button>
                 </ButtonGroup>

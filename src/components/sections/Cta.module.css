@@ -1,0 +1,9 @@
+.email_table {
+  display: table;
+  box-sizing: border-box;
+}
+.email_table_cell {
+  display: table-cell;
+  width: 100%;
+  padding-right: 7px;
+}

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import Input from '../elements/Input';
+import Button from '../elements/Button';
+import Modal from '../elements/Modal';
+import styles from './Cta.module.css';
 
 const propTypes = {
   ...SectionProps.types,
@@ -26,6 +29,25 @@ const Cta = ({
   ...props
 }) => {
 
+  const [contactMePleaseModalActive, setContactMePleaseModalActive] = useState(false);
+
+  const openModal = (e) => {
+    e.preventDefault();
+    setContactMePleaseModalActive(true);
+  }
+
+  const closeModal = (e) => {
+    e.preventDefault();
+    setContactMePleaseModalActive(false);
+  }
+
+  const contactMePlease = (e) => {
+    console.log("EMAIL:", document.getElementById("newsletter").value);
+    //setIsDialogOpen(true);
+    openModal(e);
+    return false; // to enforce html5 email validation
+  };
+  
   const outerClasses = classNames(
     'cta section center-content-mobile reveal-from-bottom',
     topOuterDivider && 'has-top-divider',
@@ -57,15 +79,40 @@ const Cta = ({
             </h3>
           </div>
           <div className="cta-action">
-            <Input id="newsletter" type="email" label="Aderisci" labelHidden hasIcon="left" placeholder={"inserisci la tua email"}>
-              <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9" />
-              </svg>
-            </Input>
+
+            <form onSubmit={contactMePlease}>
+              <div className={styles.email_table}>
+                <div className={styles.email_table_cell}>
+                  <Input id="newsletter" type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required autoComplete="email" label="Contattami" labelHidden hasIcon="left" placeholder={"inserisci la tua email"} style={{fontSize: "1.1em", paddingLeft: 20}}></Input>
+                </div>
+                <Button type="submit" tag="button" color="primary" wideMobile style={{fontSize: "1.1em", color: "white"}}>➡</Button>
+              </div>
+            </form>
+
+            {/* 
+            <form onSubmit={contactMePlease}>
+              <input type="email" placeholder="Enter your email" />
+              <input type="submit" value="Submit" />
+            </form>
+            */}
+
           </div>
         </div>
       </div>
+
+      <Modal
+        id="contact-me-please-modal"
+        show={contactMePleaseModalActive}
+        handleClose={closeModal}
+      >
+        <>
+          <p>{"Grazie per l'interesse! Ti contatteremo al più presto a questa email."}</p>
+          {/* <button name="ok" variant="primary"> Ok </button> */}
+        </>
+      </Modal>
+
     </section>
+
   );
 }
 

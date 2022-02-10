@@ -7,6 +7,7 @@ const propTypes = {
   handleClose: PropTypes.func.isRequired,
   show: PropTypes.bool.isRequired,
   closeHidden: PropTypes.bool,
+  message: PropTypes.string,
   video: PropTypes.string,
   videoTag: PropTypes.oneOf(['iframe', 'video'])
 }
@@ -15,6 +16,7 @@ const defaultProps = {
   children: null,
   show: false,
   closeHidden: false,
+  message: null,
   video: '',
   videoTag: 'iframe'
 }
@@ -25,6 +27,7 @@ const Modal = ({
   handleClose,
   show,
   closeHidden,
+  message,
   video,
   videoTag,
   ...props
@@ -75,6 +78,12 @@ const Modal = ({
           onClick={handleClose}
         >
           <div className="modal-inner" onClick={stopProgagation}>
+            {message &&
+              <>
+                <p>{message}</p>
+                <button name="ok" variant="primary">Ok</button>
+              </>
+            }
             {video ?
               <div className="responsive-video">
                 {videoTag === 'iframe' ?

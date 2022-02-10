@@ -50,8 +50,12 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'Un modello molto elegante!',
-    paragraph: 'Il modello Excel che ti forniamo ti guida a non commettere sviste durante l\'inserimento dei dati.'
+    title: 'Un modello molto elegante',
+    paragraph: `
+      Il modello Excel che ti forniamo ti guida a non commettere sviste durante l'inserimento dei dati.\n
+      Riga per riga, campo per campo, il modello controlla che i dati che inserisci siano formalmente corretti
+      e aderenti alla normativa.
+    `,
   };
 
   return (
@@ -62,7 +66,7 @@ const FeaturesSplit = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <SectionHeader data={sectionHeader} className="center-content" />
+          <SectionHeader data={sectionHeader} className="left-content" />
           <div className={splitClasses}>
 
             <div className="split-item">
@@ -71,11 +75,16 @@ const FeaturesSplit = ({
                   Un'operazione semplicissima
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Compila una riga di un foglio di calcolo per ogni appalto
+                  Compila una riga per ogni appalto
                   </h3>
                 <p className="m-0">
                   Il tuo strumento di lavoro sarà il foglio di calcolo a cui sei già abituato: <b><i>MS-Excel</i></b> o <b><i>LibreOffice Calc</i></b>.
                   Nessun bisogno di imparare nuovi software, con regole nuove e vincoli difficili da comprendere.
+                  Ti forniamo un semplicissimo modello di foglio di calcolo Excel (oppure se preferisci Open Document Format).
+                  La tua amministrazione deve compilarlo, una riga per ogni appalto.
+                  Al termine, prima della scadenza (in genere alla fine di Gennaio), è sufficiente collegarsi al nostro sito,
+                  e caricare il foglio compilato.
+                  A questo punto potrai scaricare il documento pronto da pubblicare sul sito.
                 </p>
               </div>
               <div className={
@@ -88,8 +97,8 @@ const FeaturesSplit = ({
                   // src={require('./../../assets/images/features-split-image-01.png')}
                   src={require('./../../assets/images/appalti190-elenco-gare.png')}
                   alt="Elenco gare"
-                  _width={860}
-                  h_eight={464} />
+                  width={860}
+                  height={464} />
               </div>
             </div>
 
@@ -129,7 +138,7 @@ const FeaturesSplit = ({
                 </h3>
                 <p className="m-0">
                   In un istante saprai se tutti i dati che hai inserito sono formalmente corretti.
-                  Questa verifica è la stessa adottata dall' A.N.A.C.
+                  Questa verifica è la stessa adottata dall' A.N.A.C., per cui non ci sono sorprese.
                 </p>
               </div>
               <div className={
