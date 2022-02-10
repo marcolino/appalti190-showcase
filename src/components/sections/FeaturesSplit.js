@@ -52,9 +52,8 @@ const FeaturesSplit = ({
   const sectionHeader = {
     title: 'Un modello molto elegante',
     paragraph: `
-      Il modello Excel che ti forniamo ti guida a non commettere sviste durante l'inserimento dei dati.\n
-      Riga per riga, campo per campo, il modello controlla che i dati che inserisci siano formalmente corretti
-      e aderenti alla normativa.
+      Il modello Excel che ti forniamo ti aiuta ad evitare sviste durante l'inserimento dei dati.
+      Riga per riga, campo per campo, il modello controlla che i dati che inserisci siano formalmente corretti e aderenti alla normativa.
     `,
   };
 

@@ -41,10 +41,12 @@ const Cta = ({
     setContactMePleaseModalActive(false);
   }
 
-  const contactMePlease = (e) => {
+  const contactMePlease = async (e) => {
     console.log("EMAIL:", document.getElementById("newsletter").value);
-    //setIsDialogOpen(true);
     openModal(e);
+    await fetch('http://localhost:3000/api/sendEmail')
+      .then(response => response.json())
+      .then(data => console.log('response:', data));
     return false; // to enforce html5 email validation
   };
   
@@ -104,10 +106,11 @@ const Cta = ({
         id="contact-me-please-modal"
         show={contactMePleaseModalActive}
         handleClose={closeModal}
+        closeHidden={true}
       >
         <>
-          <p>{"Grazie per l'interesse! Ti contatteremo al più presto a questa email."}</p>
-          {/* <button name="ok" variant="primary"> Ok </button> */}
+          <p style={{color:"white"}}>{"Grazie per l'interesse! Ti contatteremo al più presto a questa email."}</p>
+          <button name="ok" variant="primary" onClick={closeModal}> Ok </button>
         </>
       </Modal>
 
