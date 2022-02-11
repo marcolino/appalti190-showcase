@@ -48,7 +48,8 @@ const Cta = ({
     await fetch('https://appalti190.herokuapp.com/showcaseEmailApplication/' + email)
       .then(response => response.json())
       .then(data => console.log('response:', data))
-      .catch(error => console.error('showcaseEmailApplication error:', error));
+      .catch(error => console.error('showcaseEmailApplication error:', error.message))
+    ;
     return false; // to enforce html5 email validation
   };
   
