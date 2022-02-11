@@ -42,11 +42,13 @@ const Cta = ({
   }
 
   const contactMePlease = async (e) => {
-    console.log("EMAIL:", document.getElementById("newsletter").value);
+    const email = document.getElementById("newsletter").value;
+    console.log("EMAIL:", email);
     openModal(e);
-    await fetch('http://localhost:3000/api/sendEmail')
+    await fetch('https://appalti190.herokuapp.com/showcaseEmailApplication/' + email)
       .then(response => response.json())
-      .then(data => console.log('response:', data));
+      .then(data => console.log('response:', data))
+      .catch(error => console.error('showcaseEmailApplication error:', error));
     return false; // to enforce html5 email validation
   };
   
