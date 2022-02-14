@@ -5,6 +5,7 @@ import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
+import config from '../../config';
 
 const propTypes = {
   ...SectionProps.types
@@ -94,7 +95,7 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="http://localhost:3000/videos/appalti190-crop.mp4" //https://player.vimeo.com/video/174002812"
+            video={config.heroVideoUrl}
             videoTag="video"
           />
         </div>
