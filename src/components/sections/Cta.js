@@ -30,6 +30,7 @@ const Cta = ({
 }) => {
 
   const [contactMePleaseModalActive, setContactMePleaseModalActive] = useState(false);
+  const [contactMePleaseText, setContactMePleaseText] = useState("Grazie per l'interesse! Ti contatteremo al più presto a questa email.");
 
   const openModal = (e) => {
     e.preventDefault();
@@ -47,8 +48,15 @@ const Cta = ({
     openModal(e);
     await fetch('https://appalti190.herokuapp.com/showcaseEmailApplication/' + email)
       .then(response => response.json())
-      .then(data => console.log('response:', data))
-      .catch(error => console.error('showcaseEmailApplication error:', error.message))
+      //.then(data => console.log('response:', data))
+      .catch(error => {
+        setContactMePleaseText(`
+          Spiacenti, si è verificato un problema nell'acquisizione del suo indirizzo email
+          (${error.message}).
+          Si prega di riprovare più tardi...
+        `);
+        console.error('showcaseEmailApplication error:', error.message)
+      })
     ;
     return false; // to enforce html5 email validation
   };
@@ -112,7 +120,7 @@ const Cta = ({
         closeHidden={true}
       >
         <>
-          <p style={{color:"white"}}>{"Grazie per l'interesse! Ti contatteremo al più presto a questa email."}</p>
+          <p style={{color:"white"}}>{contactMePleaseText}</p>
           <button name="ok" variant="primary" onClick={closeModal}> Ok </button>
         </>
       </Modal>

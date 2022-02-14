@@ -25,7 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "git push heroku main",
-    "logs": "heroku logs --tail"
+    "logs": "heroku logs --tail",
+    "crop-video": "ffmpeg -y -i appalti190.mkv -filter:v \"crop=1289:725:30:142\" appalti190-crop.mp4 && totem appalti190-crop.mp4"
   },
   "eslintConfig": {
     "extends": "react-app"
