@@ -59,6 +59,26 @@ const Prices = ({
     ,
   };
 
+  const buy = async () => {
+    fetch("http://localhost:5000/create-checkout-session", {
+      method: "POST",
+      // headers: {
+      //   "Accept": "application/json",
+      //   "Content-Type": "application/json",
+      // },
+      // body: JSON.stringify({
+      //   firstParam: "yourValue",
+      //   secondParam: "yourOtherValue",
+      // })
+    }).then(response => {
+      console.log("response:", response);
+      let url = response.url;
+      //url = url.replace(/#/g, "%23");
+      //alert(url);
+      window.location.href = url;
+    });
+  };
+
   // const choice = (c) => {
   //   console.log("You choose", c);
   // };
@@ -128,7 +148,10 @@ const Prices = ({
                   </div>
                   <div className={styles.ptable_footer}>
                     <div className={styles.ptable_action}>
-                      <a href="#0">Acquista</a>
+                      <a href="#0" onClick={buy}>Acquista</a>
+                      <form action="http://localhost:5000/create-checkout-session" method="POST">
+                        <input type="submit">ACQUISTA submit</input>
+                      </form>
                     </div>
                   </div>
                 </div>
