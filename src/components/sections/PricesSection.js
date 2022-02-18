@@ -92,6 +92,8 @@ const Prices = ({
       {...props}
       className={outerClasses}
     >
+      PREZZI
+{/*
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="left-content" />
@@ -130,9 +132,6 @@ const Prices = ({
               <div className={featuredClasses}>
                 <div className={styles.ptable_single}>
                   <div className={styles.ptable_header}>
-                    {/* <div className={styles.ptable_status}>
-                      <span>Hot</span>
-                    </div> */}
                     <div className={styles.ptable_title}>
                       <h2>Standard</h2>
                     </div>
@@ -152,7 +151,6 @@ const Prices = ({
                   </div>
                   <div className={styles.ptable_footer}>
                     <div className={styles.ptable_action}>
-                      {/* <a href="#0" onClick={buy}>Acquista</a> */}
                       <form action="http://localhost:5000/create-checkout-session" method="POST">
                         <a href="#0"><input type="submit" value={"Acquista"} /></a>
                       </form>
@@ -190,33 +188,10 @@ const Prices = ({
               </div>
 
             </div>
-
-            {/* <PricingTable highlightColor='#6163FF'>
-              <PricingSlot onClick={() => choice('FREE')} buttonText='Prova gratuitamente' title='GRATUITO' priceText='€ 0 / anno'>
-                <PricingDetail> fino a <b>10</b> CIG </PricingDetail>
-                <PricingDetail> &nbsp; </PricingDetail>
-                <PricingDetail> &nbsp; </PricingDetail>
-              </PricingSlot>
-              <PricingSlot onClick={() => choice('BASIC')} buttonText='Acquista' title='BASE' priceText='€ 199 / anno'>
-                <PricingDetail> fino a <b>500</b> CIG </PricingDetail>
-                <PricingDetail> <b>Supporto email</b> </PricingDetail>
-                <PricingDetail> &nbsp; </PricingDetail>
-              </PricingSlot>
-              <PricingSlot highlighted onClick={() => choice('STANDARD')} buttonText='Acquista' title='STANDARD' priceText='€ 399 / anno'>
-                <PricingDetail> fino a <b>1000</b> CIG </PricingDetail>
-                <PricingDetail> <b>Supporto email</b> </PricingDetail>
-                <PricingDetail> &nbsp; </PricingDetail>
-              </PricingSlot>
-              <PricingSlot onClick={() => choice('NOLIMIT')} buttonText='Acquista' title='ILLIMITATO' priceText='€ 799 / anno'>
-                <PricingDetail> CIG <b>illimitate</b> </PricingDetail>
-                <PricingDetail> <b>Supporto email</b> </PricingDetail>
-                <PricingDetail> <b>Supporto telefonico</b> </PricingDetail>
-              </PricingSlot>
-            </PricingTable> */}
-
           </div>
         </div>
       </div>
+*/}
     </section>
   );
 }
