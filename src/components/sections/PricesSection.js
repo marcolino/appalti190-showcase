@@ -92,8 +92,6 @@ const Prices = ({
       {...props}
       className={outerClasses}
     >
-      PREZZI
-{/*
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="left-content" />
@@ -191,7 +189,7 @@ const Prices = ({
           </div>
         </div>
       </div>
-*/}
+
     </section>
   );
 }
