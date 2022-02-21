@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React/*, {useEffect, useState}*/ from 'react';
 import classNames from 'classnames';
 
 import styles from './PricesSection.module.css';
@@ -57,16 +57,16 @@ const Prices = ({
     ,
   };
 
-  let [stripeMode, setStripeMode] = useState(null);
-
-  useEffect(() => {
-    fetch(config.checkoutSessionMode)
-    .then(response => response.json())
-    .then(data => {
-      console.log("STRIPE MODE:", data.mode);
-      setStripeMode(data.mode);
-    })
-  }, []);
+  // let [stripeMode, setStripeMode] = useState(null);
+  //
+  // useEffect(() => {
+  //   fetch(config.checkoutSessionMode)
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     console.log("STRIPE MODE:", data.mode);
+  //     setStripeMode(data.mode);
+  //   })
+  // }, []);
 
   return (
     <section
@@ -137,7 +137,7 @@ const Prices = ({
                       <form action={config.checkoutSessionUrl} method="POST">
                         <input type="hidden" name="product" value="standard" />
                         <a href="#0"><input type="submit" value={"Acquista"} style={{color: "white", backgroundColor: "transparent", border: 0}} /></a>
-                        {stripeMode !== "live" && <div style={{fontSize: "0.6em", backgroundColor: "darkred", color: "yellow", marginTop: 2}}>payments mode is test</div>}
+                        {process.env.NODE_ENV !== "production" && <div style={{fontSize: "0.6em", backgroundColor: "darkred", color: "yellow", marginTop: 2}}>payments mode is test</div>}
                       </form>
                     </div>
                   </div>
@@ -169,7 +169,7 @@ const Prices = ({
                       <form action={config.checkoutSessionUrl} method="POST">
                         <input type="hidden" name="product" value="unlimited" />
                         <a href="#0"><input type="submit" value={"Acquista"} style={{color: "white", backgroundColor: "transparent", border: 0}} /></a>
-                        {stripeMode !== "live" && <div style={{fontSize: "0.6em", backgroundColor: "darkred", color: "yellow", marginTop: 2}}>payments mode is test</div>}
+                        {process.env.NODE_ENV !== "production" && <div style={{fontSize: "0.6em", backgroundColor: "darkred", color: "yellow", marginTop: 2}}>payments mode is test</div>}
                       </form>
                     </div>
                   </div>
