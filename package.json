@@ -1,6 +1,6 @@
 {
   "name": "appalti190-showcase",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
