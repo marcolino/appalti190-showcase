@@ -153,6 +153,7 @@ const Prices = ({
                     <div className={styles.ptable_action}>
                       <form action={config.checkoutSessionUrl} method="POST">
                         <input type="hidden" name="product" value="standard" />
+                        {config.checkoutSessionUrl}
                         {/*<a href="#0">*/}<input type="submit" value={"Acquista"} />{/*</a>*/}
                       </form>
                     </div>
