@@ -62,7 +62,10 @@ const Prices = ({
   useEffect(() => {
     fetch(config.checkoutSessionMode)
     .then(response => response.json())
-    .then(data => setStripeMode(data.mode))
+    .then(data => {
+      console.log("STRIPE MODE:", data.mode);
+      setStripeMode(data.mode);
+    })
   }, []);
 
   return (
