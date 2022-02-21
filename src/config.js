@@ -7,4 +7,8 @@ module.exports = {
     "https://appalti190.herokuapp.com" :
     "http://localhost:5000"}/create-checkout-session`
   ,
+  checkoutSessionMode: `${process.env.NODE_ENV === "production" ? // the checkout session mode
+    "https://appalti190.herokuapp.com" :
+    "http://localhost:5000"}/checkout-session-mode`
+  ,
 };

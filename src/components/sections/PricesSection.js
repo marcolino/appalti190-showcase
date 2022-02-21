@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classNames from 'classnames';
 
 import styles from './PricesSection.module.css';
@@ -57,33 +57,13 @@ const Prices = ({
     ,
   };
 
-  // const buy = async () => {
-  //   fetch("http://localhost:5000/create-checkout-session", {
-  //     method: "POST",
-  //     //redirect: "follow",
-  //     // headers: {
-  //     //   "Accept": "application/json",
-  //     //   "Content-Type": "application/json",
-  //     // },
-  //     // body: JSON.stringify({
-  //     //   firstParam: "yourValue",
-  //     //   secondParam: "yourOtherValue",
-  //     // })
-  //   }).then(response => {
-  //     console.log("response:", JSON.stringify(response));
-  //     //alert();
-  //     let url = response.url;
-  //     //url = url.replace(/#/g, "%23");
-  //     alert(JSON.stringify(response));
-  //     window.location.href = url;
-  //   }).catch(function(err) {
-  //     console.info("fetch error:", err);
-  //   });
-  // };
+  let [stripeMode, setStripeMode] = useState(null);
 
-  // const choice = (c) => {
-  //   console.log("You choose", c);
-  // };
+  useEffect(() => {
+    fetch(config.checkoutSessionMode)
+    .then(response => response.json())
+    .then(data => setStripeMode(data.mode))
+  }, []);
 
   return (
     <section
@@ -121,7 +101,7 @@ const Prices = ({
                     <div className={styles.ptable_action}>
                       {/* <a href="#0">Prova gratuitamente</a> */}
                       <form action={"/free-success"} method="GET">
-                        <a href="#0"><input type="submit" value={"Usa gratuitamente"} /></a>
+                        <a href="#0"><input type="submit" value={"Usa gratuitamente"}  style={{color: "white", backgroundColor: "transparent", border: 0}} /></a>
                       </form>
 
                     </div>
@@ -153,8 +133,8 @@ const Prices = ({
                     <div className={styles.ptable_action}>
                       <form action={config.checkoutSessionUrl} method="POST">
                         <input type="hidden" name="product" value="standard" />
-                        {config.checkoutSessionUrl}
-                        {/*<a href="#0">*/}<input type="submit" value={"Acquista"} />{/*</a>*/}
+                        <a href="#0"><input type="submit" value={"Acquista"} style={{color: "white", backgroundColor: "transparent", border: 0}} /></a>
+                        {stripeMode !== "live" && <div style={{fontSize: "0.6em", backgroundColor: "darkred", color: "yellow", marginTop: 2}}>payments mode is test</div>}
                       </form>
                     </div>
                   </div>
@@ -185,7 +165,8 @@ const Prices = ({
                     <div className={styles.ptable_action}>
                       <form action={config.checkoutSessionUrl} method="POST">
                         <input type="hidden" name="product" value="unlimited" />
-                        <a href="#0"><input type="submit" value={"Acquista"} /></a>
+                        <a href="#0"><input type="submit" value={"Acquista"} style={{color: "white", backgroundColor: "transparent", border: 0}} /></a>
+                        {stripeMode !== "live" && <div style={{fontSize: "0.6em", backgroundColor: "darkred", color: "yellow", marginTop: 2}}>payments mode is test</div>}
                       </form>
                     </div>
                   </div>
