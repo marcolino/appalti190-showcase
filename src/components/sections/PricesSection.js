@@ -137,7 +137,6 @@ const Prices = ({
                       <form action={config.checkoutSessionUrl} method="POST">
                         <input type="hidden" name="product" value="standard" />
                         <a href="#0"><input type="submit" value={"Acquista"} style={{color: "white", backgroundColor: "transparent", border: 0}} /></a>
-                        {process.env.NODE_ENV !== "production" && <div style={{fontSize: "0.6em", backgroundColor: "darkred", color: "yellow", marginTop: 2}}>payments mode is test</div>}
                       </form>
                     </div>
                   </div>
@@ -169,7 +168,6 @@ const Prices = ({
                       <form action={config.checkoutSessionUrl} method="POST">
                         <input type="hidden" name="product" value="unlimited" />
                         <a href="#0"><input type="submit" value={"Acquista"} style={{color: "white", backgroundColor: "transparent", border: 0}} /></a>
-                        {process.env.NODE_ENV !== "production" && <div style={{fontSize: "0.6em", backgroundColor: "darkred", color: "yellow", marginTop: 2}}>payments mode is test</div>}
                       </form>
                     </div>
                   </div>
