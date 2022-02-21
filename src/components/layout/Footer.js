@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import Logo from './partials/Logo';
 import FooterNav from './partials/FooterNav';
 import FooterSocial from './partials/FooterSocial';
+import packageJson from '../../../package.json';
 
 const propTypes = {
   topOuterDivider: PropTypes.bool,
@@ -45,7 +46,7 @@ const Footer = ({
           </div>
           <div className="footer-bottom space-between text-xxs invert-order-desktop">
             <FooterNav />
-            <div className="footer-copyright">By <a href="https://www.arsistemi.it">ARSistemi</a>. Tutti i diritti riservati.</div>
+            <div className="footer-copyright">Da <a href="https://www.arsistemi.it" title={`(v.${packageJson.version})`}>ARSistemi</a>. Tutti i diritti riservati.</div>
           </div>
         </div>
       </div>

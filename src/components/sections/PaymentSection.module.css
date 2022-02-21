@@ -1,0 +1,9 @@
+.payment-success-body {
+  text-align: left !important;
+  color: lightgreen;
+}
+
+.payment-cancel-body {
+  text-align: left !important;
+  color: pink;
+}

@@ -1,14 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
 
-//import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
-// TODO: use https://codepen.io/htmlcodex/pen/JjYmEeV
-
 import styles from './PricesSection.module.css';
 
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 //import Image from '../elements/Image';
+import config from '../../config';
 
 const featuredClasses = `${styles.ptable_item} ${styles.featured_item}`;
 
@@ -149,7 +147,7 @@ const Prices = ({
                   </div>
                   <div className={styles.ptable_footer}>
                     <div className={styles.ptable_action}>
-                      <form action="http://localhost:5000/create-checkout-session" method="POST">
+                      <form action={config.checkoutSessionUrl} method="POST">
                         <a href="#0"><input type="submit" value={"Acquista"} /></a>
                       </form>
                     </div>

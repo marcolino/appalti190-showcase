@@ -71,7 +71,7 @@ const FeaturesTiles = ({
                   </h4>
                   <p className="m-0 text-sm mb-8">
                     La nostra politica di prezzi cerca di adattarsi a qualsiasi tipo di entità, dalle più piccole alle più strutturate.
-                    Offriamo anche un piano gratuito, per realtà molto piccole, oppure per preovare la funzionalità della nostra soluzione.
+                    Offriamo anche un piano gratuito, per realtà molto piccole, oppure per provare la funzionalità della nostra soluzione.
                   </p>
                 </div>
                 <p className="mt-8">
