@@ -2,4 +2,4 @@
 + parametrize dev/prod localhost/url
 + show version someway
 + add package version bump in yarn push
-- make better payment thank you and cancel pages
++ make better payment thank you and cancel pages
