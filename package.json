@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "push": "yarn version --patch && git add . && git commit -m \"Commit from package script\" && git pull && git push --follow-tags",
     "push-deploy": "yarn push && yarn deploy",
-    "predeploy": "yarn test",
+    "predeploy_disabled": "yarn test",
     "deploy": "git push heroku main",
     "logs": "heroku logs --tail",
     "crop-video": "ffmpeg -y -i appalti190.mkv -filter:v \"crop=1289:725:30:142\" appalti190-crop.mp4 && totem appalti190-crop.mp4"
