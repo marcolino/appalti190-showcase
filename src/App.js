@@ -14,10 +14,11 @@ import Contacts from './views/Contacts';
 import AboutUs from './views/AboutUs';
 import Faq from './views/Faq';
 import Support from './views/Support';
+import FreeSuccess from './views/FreeSuccess';
 import PaymentSuccess from './views/PaymentSuccess';
 import PaymentCancel from './views/PaymentCancel';
 
-// Initialize Google Analytics
+// initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
 const trackPage = page => {
@@ -49,6 +50,7 @@ const App = () => {
           <AppRoute exact path="/aboutus" component={AboutUs} layout={LayoutDefault} />
           <AppRoute exact path="/faq" component={Faq} layout={LayoutDefault} />
           <AppRoute exact path="/support" component={Support} layout={LayoutDefault} />
+          <AppRoute exact path="/free-success" component={FreeSuccess} layout={LayoutDefault} />
           <AppRoute exact path="/payment-success" component={PaymentSuccess} layout={LayoutDefault} />
           <AppRoute exact path="/payment-cancel" component={PaymentCancel} layout={LayoutDefault} />
         </Switch>

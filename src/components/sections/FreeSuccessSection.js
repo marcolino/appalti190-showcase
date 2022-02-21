@@ -14,7 +14,7 @@ const propTypes = {
 const defaultProps = {
   ...SectionTilesProps.defaults
 }
-const PaymentSuccess = ({
+const FreeSuccess = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -44,20 +44,21 @@ const PaymentSuccess = ({
   const tilesClasses = classNames(
     'tiles-wrap center-content',
     pushLeft && 'push-left',
-    styles['payment-success-body'],
+    styles['free-success-body'],
   );
 
   const sectionHeader = {
     title: '🏁 Complimenti!',
     paragraph:
-      'Pagamento avvenuto con successo.'
+      'Il periodo illimitato di prova è iniziato.'
     ,
   };
 
   const sectionBody = {
     title: '',
     paragraph:
-      'Abbiamo inviato al tuo indirizzo e-mail le credenziali con cui puoi accedere al sito per scaricare il modello Excel, ed in seguito caricare il foglio Excel prodotto.'
+      'Abbiamo inviato al tuo indirizzo e-mail le credenziali con cui puoi accedere al sito per scaricare il modello Excel, ed in seguito caricare il foglio Excel prodotto.' +
+      'Ti ricordiamo che non questa versione gratutita puoi inserire al massimo 10 righe nel foglio Excel, altrimenti verrà rifiutato in fase di verifica.'
     ,
   };
 
@@ -84,7 +85,7 @@ const PaymentSuccess = ({
   );
 }
 
-PaymentSuccess.propTypes = propTypes;
-PaymentSuccess.defaultProps = defaultProps;
+FreeSuccess.propTypes = propTypes;
+FreeSuccess.defaultProps = defaultProps;
 
-export default PaymentSuccess;
+export default FreeSuccess;

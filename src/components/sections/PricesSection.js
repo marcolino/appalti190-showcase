@@ -119,7 +119,11 @@ const Prices = ({
                   </div>
                   <div className={styles.ptable_footer}>
                     <div className={styles.ptable_action}>
-                      <a href="#0">Prova gratuitamente</a>
+                      {/* <a href="#0">Prova gratuitamente</a> */}
+                      <form action={"/free-success"} method="GET">
+                        <a href="#0"><input type="submit" value={"Usa gratuitamente"} /></a>
+                      </form>
+
                     </div>
                   </div>
                 </div>
@@ -148,7 +152,8 @@ const Prices = ({
                   <div className={styles.ptable_footer}>
                     <div className={styles.ptable_action}>
                       <form action={config.checkoutSessionUrl} method="POST">
-                        <a href="#0"><input type="submit" value={"Acquista"} /></a>
+                        <input type="hidden" name="product" value="standard" />
+                        {/*<a href="#0">*/}<input type="submit" value={"Acquista"} />{/*</a>*/}
                       </form>
                     </div>
                   </div>
@@ -177,7 +182,10 @@ const Prices = ({
                   </div>
                   <div className={styles.ptable_footer}>
                     <div className={styles.ptable_action}>
-                      <a href="#0">Acquista</a>
+                      <form action={config.checkoutSessionUrl} method="POST">
+                        <input type="hidden" name="product" value="unlimited" />
+                        <a href="#0"><input type="submit" value={"Acquista"} /></a>
+                      </form>
                     </div>
                   </div>
                 </div>
