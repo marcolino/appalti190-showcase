@@ -74,7 +74,7 @@ h1.demo_title a {
 }
 
 .pricing_table .ptable_single:hover {
-  box-shadow: 0 0 30px #cccccc;
+  box-shadow: 0 0 50px #fff;
 }
 
 .pricing_table .ptable_header {
