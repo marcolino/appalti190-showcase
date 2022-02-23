@@ -51,22 +51,10 @@ const Prices = ({
 
   const sectionHeader = {
     title: 'I prezzi',
-    /* eslint-disable no-useless-concat */
     paragraph:
       'irrisori...'
     ,
   };
-
-  // let [stripeMode, setStripeMode] = useState(null);
-  //
-  // useEffect(() => {
-  //   fetch(config.checkoutSessionMode)
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     console.log("STRIPE MODE:", data.mode);
-  //     setStripeMode(data.mode);
-  //   })
-  // }, []);
 
   return (
     <section

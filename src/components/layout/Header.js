@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 //import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
+import config from '../../config';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -113,7 +114,7 @@ const Header = ({
                     )}>
                     <li>
                       {/* <Link to="#0" onClick={closeMenu}>Documentation</Link> */}
-                      <a href="https://www.anticorruzione.it/-/adempimenti-legge-190/2012-art.-1-comma-32-7" target="external" onClick={closeMenu}>Documentazione ANAC</a>
+                      <a href={config.documentationeANACUrl} target="external" onClick={closeMenu}>Documentazione ANAC</a>
                       
                     </li>
                   </ul>
@@ -123,7 +124,7 @@ const Header = ({
                     >
                       <li>
                         {/* <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Accedi</Link> */}
-                        <a href="https://appalti190.herokuapp.com/" target="external" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Accedi</a>
+                        <a href={config.serverBaseUrl} target="external" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Accedi</a>
                       </li>
                     </ul>}
                 </div>

@@ -6,6 +6,7 @@ import Input from '../elements/Input';
 import Button from '../elements/Button';
 import Modal from '../elements/Modal';
 import styles from './Cta.module.css';
+import config from '../../config';
 
 const propTypes = {
   ...SectionProps.types,
@@ -46,7 +47,7 @@ const Cta = ({
     const email = document.getElementById("newsletter").value;
     console.log("EMAIL:", email);
     openModal(e);
-    await fetch('https://appalti190.herokuapp.com/showcaseEmailApplication/' + email)
+    await fetch(`${config.serverBaseUrl}/showcaseEmailApplication/${email}`)
       .then(response => response.json())
       //.then(data => console.log('response:', data))
       .catch(error => {
