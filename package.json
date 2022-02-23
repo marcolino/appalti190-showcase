@@ -1,6 +1,6 @@
 {
-  "name": "appalti190-showcase-staging",
-  "version": "0.0.29",
+  "name": "appalti190-showcase",
+  "version": "0.0.30",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
